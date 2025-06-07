@@ -6,7 +6,7 @@ describe("Mentoring Schedule Flow - Dealls QA Test", function () {
 
   before(async () => {
     browser = await chromium.launch({
-      headless: false,
+      headless: true,
       args: ["--start-maximized"],
     });
   });

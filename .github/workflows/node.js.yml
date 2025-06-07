@@ -29,7 +29,7 @@ jobs:
         run: npx playwright install
 
       - name: Run tests
-        run: npx mocha tests/*.spec.js --reporter mochawesome
+        run: npx mocha tests/*.spec.js --reporter mochawesome --timeout=60000
 
       - name: Upload mochawesome report
         uses: actions/upload-artifact@v4

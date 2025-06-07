@@ -22,14 +22,13 @@ environments.forEach(({ name, launcher, contextOptions }) => {
     // Run once before all tests in this suite
     before(async () => {
       browser = await launcher.launch({
-        headless: true,
-        args: ["--start-maximized"],
+        headless: false,
       });
     });
 
     // Run once after all tests in this suite
     after(async () => {
-      await browser.close();
+      if (browser) await browser.close();
     });
 
     // Run before each test

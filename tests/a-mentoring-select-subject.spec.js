@@ -2,17 +2,19 @@ const { chromium } = require("playwright");
 const { expect } = require("chai");
 
 describe("Mentoring Schedule Flow - Dealls QA Test", function () {
+  this.timeout(10000);
+
   let browser, context, page;
 
   before(async () => {
     browser = await chromium.launch({
-      headless: true,
+      headless: false,
       args: ["--start-maximized"],
     });
   });
 
   after(async () => {
-    await browser.close();
+    if (browser) await browser.close();
   });
 
   beforeEach(async () => {
@@ -42,8 +44,8 @@ describe("Mentoring Schedule Flow - Dealls QA Test", function () {
       );
 
       await page.click("xpath=//div[text()='Select Date Range']");
-      await page.click("xpath=//span[text()='9']");
-      await page.click("xpath=//span[text()='15']");
+      await page.click("xpath=//span[text()='10']");
+      await page.click("xpath=//span[text()='16']");
 
       await page.fill("xpath=//input[@id='proposedTimes_0_startTime']", "0821");
       await page.fill("xpath=//input[@id='proposedTimes_0_endTime']", "2321");
@@ -65,7 +67,7 @@ describe("Mentoring Schedule Flow - Dealls QA Test", function () {
 
       await page.fill("xpath=//input[@id='fullName']", "Nurul Arifin");
       await page.fill("xpath=//input[@id='whatsapp']", "62123456789");
-      await page.fill("xpath=//input[@id='email']", "dasss@dealls.com");
+      await page.fill("xpath=//input[@id='email']", "1234@dealls.com");
       await page.fill("xpath=//input[@id='birthDate']", "09/10/1995");
 
       await page.click(

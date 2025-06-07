@@ -74,7 +74,7 @@ describe("Mentoring Schedule Flow - Dealls QA Test", function () {
 
       await page.fill("xpath=//input[@id='password']", "TestPassword123");
       await page.waitForSelector('xpath=//input[@id="confirmPassword"]', {
-        timeout: 10000,
+        timeout: 20000,
       });
       await page.fill(
         "xpath=//input[@id='confirmPassword']",

@@ -2,8 +2,6 @@ const { chromium } = require("playwright");
 const { expect } = require("chai");
 
 describe("Mentoring Schedule Flow - Dealls QA Test", function () {
-  this.timeout(10000);
-
   let browser, context, page;
 
   before(async () => {

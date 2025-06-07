@@ -4,9 +4,9 @@ This project automates the mentoring schedule flow on the Dealls platform using 
 
 ## 📦 Stack
 
-- **Playwright** – for browser automation
-- **Mocha** – as the test runner
-- **Chai** – for assertions
+- **[Playwright](https://playwright.dev/)** – for browser automation
+- **[Mocha](https://mochajs.org/)** – as the test runner
+- **[Chai](https://www.chaijs.com/)** – for assertions
 
 ## 🚀 Getting Started
 

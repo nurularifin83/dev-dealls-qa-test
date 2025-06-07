@@ -12,16 +12,16 @@ This project automates the mentoring schedule flow on the Dealls platform using 
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/yourusername/DEV-DEALLS-QA-TEST.git
-   cd DEV-DEALLS-QA-TEST
-   ```
+```bash
+git clone https://github.com/yourusername/DEV-DEALLS-QA-TEST.git
+cd DEV-DEALLS-QA-TEST
+```
 
 2. Install dependencies:
 
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
 3. Run the tests:
 

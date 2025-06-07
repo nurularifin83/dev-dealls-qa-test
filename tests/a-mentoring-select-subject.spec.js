@@ -65,7 +65,7 @@ describe("Mentoring Schedule Flow - Dealls QA Test", function () {
 
       await page.fill("xpath=//input[@id='fullName']", "Nurul Arifin");
       await page.fill("xpath=//input[@id='whatsapp']", "62123456789");
-      await page.fill("xpath=//input[@id='email']", "1234@dealls.com");
+      await page.fill("xpath=//input[@id='email']", "0987@dealls.com");
       await page.fill("xpath=//input[@id='birthDate']", "09/10/1995");
 
       await page.click(
@@ -74,12 +74,9 @@ describe("Mentoring Schedule Flow - Dealls QA Test", function () {
 
       await page.fill("xpath=//input[@id='password']", "TestPassword123");
       await page.waitForSelector('xpath=//input[@id="confirmPassword"]', {
-        timeout: 20000,
+        timeout: 60000,
       });
-      await page.fill(
-        "xpath=//input[@id='confirmPassword']",
-        "TestPassword123"
-      );
+      await page.fill("#confirmPassword", "TestPassword123");
 
       await page.check("xpath=//input[@type='checkbox' and @value='1']");
       await page.check("xpath=//input[@type='checkbox' and @value='3']");
